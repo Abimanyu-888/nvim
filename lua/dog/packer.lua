@@ -23,4 +23,19 @@ return require('packer').startup(function(use)
 			vim.cmd('colorscheme rose-pine')
 		end
 	})
+	use {
+	      'williamboman/mason.nvim',
+	      'williamboman/mason-lspconfig.nvim',
+	      'neovim/nvim-lspconfig',
+	  }
+	
+	use {
+	      'hrsh7th/nvim-cmp',           -- The completion plugin
+	      'hrsh7th/cmp-nvim-lsp',       -- lsp completion source
+	      'hrsh7th/cmp-buffer',         -- buffer completion source
+	      'hrsh7th/cmp-path',           -- path completion source
+	      'saadparwaiz1/cmp_luasnip',   -- snippet completion source
+	      'L3MON4D3/LuaSnip',           -- snippet engine
+	      'rafamadriz/friendly-snippets', -- useful snippets
+	  }
 end)
